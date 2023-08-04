@@ -12,6 +12,8 @@ export const getHtmlTemplate = (spec: string) => `
     <script src="https://unpkg.com/react@${reactVersion}/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@${reactVersion}/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/pixi.js@${pixiVersion}/dist/browser/pixi.min.js"></script>
+    <script src="higlass-time-interval-track.js"></script>
+    <script src="higlass-unix-time-track.js"></script>
     <script src="https://unpkg.com/higlass@${higlassVersion}/dist/hglib.js"></script>
     <script src="https://unpkg.com/gosling.js@${goslingVersion}/dist/gosling.js"></script>
 </head>

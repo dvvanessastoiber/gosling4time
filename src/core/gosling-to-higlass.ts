@@ -69,7 +69,8 @@ export function goslingToHiGlass(
                 : 0);
         const hgTrack: HiGlassTrack = {
             uid: `${firstResolvedSpec.id}-track`, // This is being used to cache the visualization
-            type: Is2DTrack(firstResolvedSpec) ? 'gosling-2d-track' : 'gosling-track',
+            // TODO: change condition to certain temporal attribute
+            type: (firstResolvedSpec.subtitle === 'unix-time-track') ? 'unix-time-track' : Is2DTrack(firstResolvedSpec) ? 'gosling-2d-track' : 'gosling-track',
             server,
             tilesetUid,
             width,

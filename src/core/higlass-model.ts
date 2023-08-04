@@ -120,6 +120,20 @@ export class HiGlassModel {
         return this;
     }
 
+    public setUnixTimeTrack(
+        width: number,
+        height: number
+    ) {
+        if (this.getLastView()) {
+            this.getLastView().tracks.top?.push({
+                type: 'unix-time-track',
+                width,
+                height
+            });
+        }
+        return this;
+    }
+
     public addBrush(
         layout: 'circular' | 'linear',
         viewId: string,

@@ -226,7 +226,8 @@
         "gosling-track",
         "gosling-2d-track",
         "axis-track",
-        "text"
+        "text",
+        "unix-time-track"
       ],
       "type": "string"
     },

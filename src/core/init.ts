@@ -4,6 +4,7 @@ import higlassRegister from 'higlass-register';
 import { TextTrack } from 'higlass-text';
 import { AxisTrack } from '@gosling-genomic-axis';
 import { BrushTrack } from '@gosling-brush';
+import { UnixTimeTrack } from '../gosling-unix-time';
 import { GoslingTrack } from '@gosling-track';
 import * as dataFetchers from '@data-fetchers';
 
@@ -62,6 +63,15 @@ export function init() {
         name: 'BrushTrack',
         track: BrushTrack,
         config: BrushTrack.config
+    });
+
+    /**
+     * Register a unix time plugin track to HiGlassComponent
+     */
+    higlassRegister({
+        name: 'UnixTimeTrack',
+        track: UnixTimeTrack,
+        config: UnixTimeTrack.config,
     });
 
     /**
